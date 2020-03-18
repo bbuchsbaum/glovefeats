@@ -1,5 +1,6 @@
 
 #' @import data.table
+#' @export
 glove_features <- function(words) {
   if (!exists("glove50")) {
     data("glove50")
@@ -9,6 +10,7 @@ glove_features <- function(words) {
 
 }
 
+#' @export
 word_sim <- function(words, method="cosine") {
   feats <- glove_features(words)
   fmat <- do.call(rbind, feats$vec)
