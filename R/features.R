@@ -1,4 +1,5 @@
 
+#' @import data.table
 glove_features <- function(words) {
   if (!exists("glove50")) {
     data("glove50")
