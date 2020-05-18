@@ -2,4 +2,6 @@
 
 export(glove_features)
 export(word_sim)
+export(wordpair_sim)
+import(assertthat)
 import(data.table)

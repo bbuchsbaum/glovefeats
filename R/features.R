@@ -29,7 +29,7 @@ wordpair_sim <- function(words, method="cosine") {
   for (i in 1:nrow(words)) {
     f1 <- glove_features(words[i,1])
     f2 <- glove_features(words[i,2])
-    sim[i] <- proxy::simil(rbind(f1$vec[[1]],f2$vec[[1]]), method)[1,1]
+    sim[i] <- proxy::simil(rbind(f1$vec[[1]],f2$vec[[1]]), method)
   }
 
   sim
