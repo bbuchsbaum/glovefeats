@@ -1,12 +1,15 @@
 
 #' @import data.table
 #' @export
-glove_features <- function(words) {
-  if (!exists("glove50")) {
-    data("glove50")
+glove_features <- function(words, feats=NULL) {
+  if (is.null(feats)) {
+    if (!exists("glove50")) {
+      data("glove50")
+    }
+    feats <- glove50
   }
 
-  glove50[words]
+  feats[words]
 
 }
 
